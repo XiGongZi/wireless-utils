@@ -33,14 +33,3 @@ type UserInputContextUnit = {
   value: UserInputContext;
   unit: FrequencyUnitEnum;
 }
-
-interface IHzTurn {
-  value: UserInputContext;
-  unit: FrequencyUnitEnum;
-  unitInfo: string;
-  frequency: Hz;
-  // @desc direct setting Hz Frequency to be suitable unit and value
-  setValue: (value: Hz) => void;
-  // @desc set UserInputContext to be suitable unit and value
-  setHzValue: (unit: UserInputContext) => void;
-}

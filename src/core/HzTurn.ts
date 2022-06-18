@@ -1,5 +1,15 @@
 import FrequencyUtils from "../utils/FrequencyUtils";
 
+interface IHzTurn {
+  value: UserInputContext;
+  unit: FrequencyUnitEnum;
+  unitInfo: string;
+  frequency: Hz;
+  // @desc direct setting Hz Frequency to be suitable unit and value
+  setValue: (value: Hz) => void;
+  // @desc set UserInputContext to be suitable unit and value
+  setHzValue: (unit: UserInputContext) => void;
+}
 export class HzTurn implements IHzTurn {
   value: UserInputContext = "0";
   unit: FrequencyUnitEnum = FrequencyUnitEnum.Hz;
