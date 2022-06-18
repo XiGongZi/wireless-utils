@@ -10,7 +10,7 @@ interface IHzTurn {
   // @desc set UserInputContext to be suitable unit and value
   setHzValue: (unit: UserInputContext) => void;
 }
-export class HzTurn implements IHzTurn {
+export default class HzTurn implements IHzTurn {
   value: UserInputContext = "0";
   unit: FrequencyUnitEnum = FrequencyUnitEnum.Hz;
   // unitArr;
@@ -36,12 +36,6 @@ export class HzTurn implements IHzTurn {
    */
   set frequency(val) {
     this.setValue(Number(val));
-  }
-  get notZeroHz() {
-    console.log("notZeroHz", this.value, typeof this.value);
-
-    if (this.value) return this.value;
-    else return this.tipsString;
   }
   /**
    *
